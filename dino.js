@@ -138,7 +138,7 @@ Runner.config = {
  */
 Runner.defaultDimensions = {
   WIDTH: DEFAULT_WIDTH,
-  HEIGHT: 150
+  HEIGHT: 300
 };
 
 
