@@ -79,7 +79,7 @@ window['Runner'] = Runner;
  * Default game width.
  * @const
  */
-var DEFAULT_WIDTH = 30;
+var DEFAULT_WIDTH = 600;
 
 /**
  * Frames per second.
