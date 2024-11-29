@@ -577,7 +577,8 @@ Runner.prototype = {
           this.currentSpeed += this.config.ACCELERATION;
         }
       } else {
-        this.gameOver();
+        // this.gameOver();
+        this.askQuestion();
       }
 
       var playAchievementSound = this.distanceMeter.update(deltaTime,
@@ -2413,6 +2414,36 @@ NightMode.prototype = {
   }
 
 };
+
+
+//******************************************************************************
+
+/**
+ * Testing question.
+ * plan to call question on collision
+ *  * @param {HTMLCanvasElement} canvas
+ * @param {Object} spritePos Horizon position in sprite.
+ * @constructor
+ */
+
+function askQuestion() {
+  // Define your question
+  const question = "What is the capital of France?";
+
+  // Display the question in a popup and get the user's answer
+  const userAnswer = prompt(question);
+
+  // Check the answer and give feedback
+  if (userAnswer.toLowerCase() === "paris") {
+    alert("Correct!");
+  } else {
+    alert("Incorrect. The correct answer is Paris.");
+  }
+}
+
+// // Call the function to display the question popup
+//   askQuestion();
+
 
 
 //******************************************************************************
