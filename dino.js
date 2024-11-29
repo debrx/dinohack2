@@ -99,6 +99,9 @@ var IS_MOBILE = /Android/.test(window.navigator.userAgent) || IS_IOS;
 /** @const */
 var ARCADE_MODE_URL = 'chrome://dino/';
 
+/** Lives */
+var lives = 5;
+
 /**
  * Default game configuration.
  * @enum {number}
@@ -2429,15 +2432,22 @@ NightMode.prototype = {
 function askQuestion() {
   // Define your question
   const question = "What is the capital of France?";
-
+  const correctAnswer = "Paris"
   // Display the question in a popup and get the user's answer
   const userAnswer = prompt(question);
 
   // Check the answer and give feedback
-  if (userAnswer.toLowerCase() === "paris") {
-    alert("Correct!");
-  } else {
-    alert("Incorrect. The correct answer is Paris.");
+  if (userAnswer !== null) {
+    if (userAnswer.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+      alert("Correct!");
+    } else {
+      alert("Incorrect. The correct answer is " + correctAnswer + ".");
+    // Decrease lives if the answer is wrong
+      lives -= 1;
+      // if (lives <= 0) {
+      //   gameOver(); // End the game if no lives are left
+      // }
+    }
   }
 }
 
