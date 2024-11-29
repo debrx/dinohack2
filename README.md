@@ -11,4 +11,3 @@
 You can click [here](https://congerh.github.io/dino/) to play online.
 
 
-Repo to be changed to solidify hackathon cred
